@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFF">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Toolbar
+            android:id="@+id/toolbarSpeaker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="1dp"
+                android:layout_margin="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="15dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_parrafo">
+
+                    <ImageView
+                        android:id="@+id/ivDetailSpeakerImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:src="@mipmap/ic_launcher"
+                        android:layout_margin="10dp"/>
+
+                    <TextView
+                        android:id="@+id/ivDetailSpeakerName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre Apellido"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:textSize="@dimen/tamanoTitulo"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_margin="5dp"/>
+                    <TextView
+                        android:id="@+id/tvDetailSpeakerJob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Jobtitle"
+                        android:textSize="@dimen/tamanoSubtitulo"
+                        android:textColor="@color/colorAccent"
+                        android:gravity="center_horizontal"
+                        android:layout_margin="5dp"/>
+                    <TextView
+                        android:id="@+id/tvDetailSpeakerWork"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Trabajo"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_margin="5dp"/>
+
+                    <ImageView
+                        android:id="@+id/ivDetailSpeakerTwitter"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_icons_twitter"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <TextView
+                        android:id="@+id/tvDetailSpeakerDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lorem"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_margin="5dp"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </ScrollView>
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
